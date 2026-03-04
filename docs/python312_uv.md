@@ -124,8 +124,8 @@ Minimum:
 - `uv run python -c "import torch, torchaudio"`
 
 Suggested (since many issues are runtime/native):
-- Run the README “Basic Usage” example on Python 3.12.
-- Run `python app.py` and perform one synthesis request.
+- Run the README "Basic Usage" example on Python 3.12.
+- Run `uv run python app.py` and perform one synthesis request.
 - If you rely on fine-tuning scripts, run a short smoke test (imports + argument parsing) under 3.12.
 
 ## Notes / follow-ups
