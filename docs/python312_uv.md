@@ -54,6 +54,7 @@ Packages to pay special attention to when claiming “3.12 supported”:
 
 - **PyTorch stack**: `torch`, `torchaudio`, `torchcodec`
   - Usually fine on 3.12, but availability differs by OS/CUDA version.
+  - `torchcodec` also requires FFmpeg shared libraries at runtime (e.g. installing `ffmpeg` on Ubuntu). Without them, `import torchcodec` will fail even if the wheel installs successfully.
 - **Rust/C++ extensions**: `tokenizers`, `sentencepiece`, `orjson`, `xxhash`, `pyahocorasick`, `editdistance`
 - **Scientific stack**: `numpy`, `scipy`, `pyarrow`
 - **JIT stack**: `numba`, `llvmlite` (often the slowest to catch up on new Python versions)
