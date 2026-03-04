@@ -6,3 +6,6 @@ voxcpm.egg-info
 # uv / virtual environments
 .venv/
 .uv/
+
+# build artifacts
+/dist/
