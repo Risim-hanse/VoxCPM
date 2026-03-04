@@ -40,8 +40,7 @@ uv python install 3.12
 uv lock --python python3.12 --dry-run
 ```
 
-This indicates all declared requirements have **Python 3.12-compatible releases on PyPI** (at least at the metadata level) and can be locked.
-
+This indicates the declared requirements could be resolved and locked for the tested environment (Python 3.12, current index state), at least at the metadata level.
 ### 2) Code scan for common 3.12 breakages
 A quick scan of `src/voxcpm/**` did **not** find typical 3.12 blockers like:
 - `distutils` imports (removed)
