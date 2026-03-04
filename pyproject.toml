@@ -22,6 +22,7 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
 ]
 requires-python = ">=3.10"
 dependencies = [
@@ -82,8 +83,23 @@ version_scheme = "post-release"
 
 [tool.black]
 line-length = 120
-target-version = ['py310']
-include = '\.pyi?$'
+# Format with Python 3.10+ syntax (compatible with 3.10–3.12).
+target-version = ['py310', 'py311', 'py312']
+include = '\.pyi?
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
 extend-exclude = '''
 /(
   # directories
